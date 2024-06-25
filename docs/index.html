@@ -1,24 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sned_form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-        iframe {
-            border: none;
-            margin-top: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta content="width=device-width" name="viewport">
+<title>Example Form</title>
+
+<!-- jquery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- bootstrap -->
+<link href="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- isolated bootstrap -->
+<!-- <link href="//toert.github.io/Isolated-Bootstrap/versions/4.1.0/iso_bootstrap4.1.0min.css" rel="stylesheet"> -->
+
+<style>
+
+body {
+  max-width: 640px;
+  padding: 1rem;
+}
+
+</style>
+
 </head>
 <body>
-    <h1>Pharmacie du Centre  </h1>
-    <p>CIP94200</p>
-    <iframe src="https://forms.gle/FZ8TKFMKML7KxrwT8" width="640" height="480" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-</body>
-</html>
+<h1>Example Form</h1>
+
+
+
+
+
+<!--
+
+  google-forms-css
+
+-->
+
+<div class="bootstrap" id="google-forms-css">
+
+  <!-- loading -->
+  <div id="google-forms-css-loading">
+    <p>Loading…</p>
+  </div>
+
+  <div id="google-forms-css-main" style="display: none;">
+
+    <!-- header -->
+    <p>Please fill out the form below.</p>
+    <p class="text-danger">* Required</p>
+
+    <form id="google-forms-css-form"></form>
+
+    <!-- footer -->
+    <p><a href="privacy-policy.html">Privacy Policy</a></p>
+
+  </div>
+
+  <!-- confirmation -->
+  <div id="google-forms-css-confirmation" style="display: none;">
+    <p>Thanks!</p>
+  </div>
+
+</div>
+
+<script src="google-forms-css/google-forms-css.js"></script>
+<script>
+
+new googleFormsCSS({
+  formURL: 'https://forms.gle/FZ8TKFMKML7KxrwT8', // example form
+  // confirmationURL: 'confirmation.html', // optional
+  // placeholderText: 'Your answer', // optional
+});
+
+</script>
+
+
+
+
